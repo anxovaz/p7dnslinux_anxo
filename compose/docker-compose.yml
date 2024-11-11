@@ -18,8 +18,8 @@ services:
       - ./conf:/etc/bind
       - ./zonas:/var/lib/bind
   cliente:
-    container_name: cliente
-    image: ubuntu
+    container_name: clientealpine
+    image: alpine
     platform: linux/amd64
     tty: true
     stdin_open: true
