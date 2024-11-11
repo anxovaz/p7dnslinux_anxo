@@ -179,7 +179,7 @@ apk add --update bind-tools
 Executo dig:
 ```shell
 dig anxovaz.com
-``
+```
 
 
 
