@@ -1,13 +1,7 @@
 services:
   asir_bind9:
     container_name: asir_bind9
-    # usamos esta imagen para poder ver los logs
-    # la imagen de internetsystemsconsortium/bind9
-    # no muestra los logs
     image: ubuntu/bind9
-    # especificamos la plataforma de la imagen
-    # es posible conflicto cuando el host es 'arm'
-    # ya que no existe una imagen para esa plataforma
     platform: linux/amd64
     ports:
       - 120:120
@@ -23,7 +17,6 @@ services:
     platform: linux/amd64
     tty: true
     stdin_open: true
-    # configuramos para que el cliente use nuestro dns
     dns:
       - 172.28.5.1
     networks:
