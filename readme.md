@@ -11,7 +11,7 @@ docker network create \
 ```
 ## 2. docker-compose.yml
 No archivo .yml indico ao servidor asir_bind9 os volúmenes "conf" e "zonas" onde vai a estar gardada a confiuración e despois creo o cliente coa imaxe alpine.
-Contenido docker-compose.yml:
+Contido docker-compose.yml:
 ```shell
 services:
   asir_bind9:
@@ -44,7 +44,7 @@ networks:
 
 ```
 ## 3. Carpeta zonas
-Na carpeta "zonas" creo una base de datos para o zoa "anxovaz.com" chamada "db.asircastelao.int" no que configuro a zoa e os seus rexistros:
+Na carpeta "zonas" creo una base de datos para o zoa "anxovaz.com" chamada "db.asircastelao.int" no que configuro a zoa e os seus rexistros.
 Contido db.asircastelao.int:
 ```shell
 $TTL    604800
@@ -58,7 +58,7 @@ $TTL    604800
 @       IN      NS      anxovaz.com.
 @       IN      A       172.28.5.1      
 @       IN      AAAA    ::1             
-@       IN      TXT     "anxo"
+@       IN      TXT     "anxotxt"
 
 anxovaz.com. IN  A       172.28.5.1     
 ns      IN      A       172.28.5.1      
@@ -74,7 +74,7 @@ Nesta carpeta monto os seguintes archivos:
 -named.conf.options
 
 ### Archivo named.conf
-Neste archivo simplemente fai referencia a os archivos "named.conf.options" e "named.conf.local"
+Neste archivo simplemente fai referencia a os archivos "named.conf.options" e "named.conf.local".
 Contido named.conf:
 ```shell
 include "/etc/bind/named.conf.options";
